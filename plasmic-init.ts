@@ -1,5 +1,5 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
-import TextComponent from "@/components/Test/TextComponent";
+import TestComponent from "@/components/Test/TestComponent";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -25,8 +25,8 @@ export const PLASMIC = initPlasmicLoader({
 
 // PLASMIC.registerComponent(...);
 
-PLASMIC.registerComponent(TextComponent, {
-  name: "TextComponent",
+PLASMIC.registerComponent(TestComponent, {
+  name: "TestComponent",
   props: {
     // Pass in arbitrary content in the visual editing canvas
     children: 'slot',
@@ -52,10 +52,10 @@ PLASMIC.registerComponent(TextComponent, {
       type: 'choice',
 
       // Hide the 'color' prop if no header content
-      hidden: (props) => !props.header,
+      hidden: (props : any) => !props.header,
 
       // Offer different choices depending on if darkMode is on
-      options: (props) => props.darkMode ? ['black', 'blue'] : ['yellow', 'green']
+      options: (props : any) => props.darkMode ? ['black', 'blue'] : ['yellow', 'green']
     }
   }
 });
