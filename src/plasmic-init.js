@@ -15,7 +15,7 @@ export const PLASMIC = initPlasmicLoader({
 });
 
 PLASMIC.registerComponent(TestCMP, {
-    name: "ProductCard",
+    name: "Test Component",
     props: {
         // Pass in arbitrary content in the visual editing canvas
         children: 'slot',
